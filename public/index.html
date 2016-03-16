@@ -1,10 +1,14 @@
-<html>
+<html ng-app="WeatherStation">
   <head>
-    <meta charset="UTF-8">
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
     <title>Suhh Dude</title>
   </head>
-
-  <body>
-    Weather bihh
+  
+  <body ng-controller="weatherController">
+    <h1>The light reading is {{response.result}}</h1>
   </body>
 </html>
+
