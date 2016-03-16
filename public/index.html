@@ -1,14 +1,50 @@
 <html ng-app="weatherStation">
-  <head>
-    <!-- META -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
 
-    <title>Suhh Dude</title>
-  </head>
-  
-  <body ng-controller="weatherController">
-    <h1>The light reading is {{response.result}}</h1>
-  </body>
+<head>
+  <!-- META -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Optimize mobile viewport -->
+
+  <title>Suhh Dude</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+  <script src="weather.js"></script>
+</head>
+
+<body ng-controller="weatherController">
+  <h1>Welcome to the Weather</h1>
+
+  <div class="readout readout-temp">
+    <div>
+      <span>Temperature</span>
+    </div>
+
+    <div class="valueDisplay">
+      <span>{{}} °C</span>
+    </div>
+  </div>
+
+  <div class="readout readout-hum">
+    <div>
+      Humidity
+    </div>
+
+    <div class="valueDisplay">
+      {{}} %
+    </div>
+  </div>
+
+  <div class="readout readout-light">
+    <div>
+      Brightness
+    </div>
+
+    <div class="valueDisplay">
+      {{response.result}} Lumens
+    </div>
+  </div>
+</body>
+
 </html>
-
