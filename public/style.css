@@ -1,0 +1,25 @@
+* {
+  background-color: #8DC6FF;
+}
+
+.pageTitleBox {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.pageTitle {
+  font-size: 4rem;
+}
+
+.readout {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.readoutTitle {
+  font-size: 3rem;
+}
+
+.readoutValue {
+  font-size: 6rem;
+}

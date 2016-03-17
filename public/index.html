@@ -1,4 +1,5 @@
-<html ng-app="weatherStation">
+<!DOCTYPE html>
+<html lang="en" ng-app="weatherStation">
 
 <head>
   <!-- META -->
@@ -10,41 +11,49 @@
 
   <link rel="stylesheet" href="style.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script src="weather.js"></script>
 </head>
 
-<body ng-controller="weatherController">
-  <h1>Welcome to the Weather</h1>
+<body class="container-fluid" ng-controller="weatherController">
 
-  <div class="readout readout-temp">
-    <div>
-      <span>Temperature</span>
-    </div>
-
-    <div class="valueDisplay">
-      <span>{{temperatureValue}} °C</span>
+  <div class="row">
+    <div class="pageTitleBox col-xs-12">
+      <center><span class="pageTitle">Welcome to the Weather</span></center>
     </div>
   </div>
 
-  <div class="readout readout-hum">
-    <div>
-      Humidity
+  <div class="row">
+    <div class="readout readout-temp col-md-4">
+      <div>
+        <span class="readoutTitle">Temperature</span>
+      </div>
+
+      <div class="readoutValue">
+        <span>{{temperatureValue}} °C</span>
+      </div>
     </div>
 
-    <div class="valueDisplay">
-      {{humidityValue}} %
-    </div>
-  </div>
+    <div class="readout readout-hum col-md-4">
+      <div>
+        <span class="readoutTitle">Humidity</span>
+      </div>
 
-  <div class="readout readout-light">
-    <div>
-      Brightness
+      <div class="readoutValue">
+        {{humidityValue}} %
+      </div>
     </div>
 
-    <div class="valueDisplay">
-      {{photoCellValue}} Lumens
+    <div class="readout readout-light col-md-4">
+      <div>
+        <span class="readoutTitle">Brightness</span>
+      </div>
+
+      <div class="readoutValue">
+        {{photoCellValue}} Lumens
+      </div>
     </div>
-  </div>
+    </div>
 </body>
 
 </html>
